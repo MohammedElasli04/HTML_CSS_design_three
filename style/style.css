@@ -29,11 +29,13 @@ a {
 header {
     background-color: white;
     box-shadow: 0 0 10px #DDD;
+    position: relative;
 }
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 header .container > a {
     color: var(--main-color);
@@ -43,14 +45,19 @@ header .container > a {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: var(--main-transition);
 }
-header .container > ul {
+header .container > a:hover {
+    color: var(--main-color-hover);
+}
+header .container > .main-heading {
     display: flex;
 }
-header .container > ul > li a {
+header .container > .main-heading > li a {
     color: black;
     padding: 0 25px;
     position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,9 +65,32 @@ header .container > ul > li a {
     text-transform: capitalize;
     transition: var(--main-transition) linear;
 }
-
 header .container > ul > li a:hover {
     color: var(--main-color);
+}
+header .container > ul > li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
+    height: 4px;
+    width: 0;
+    transition: var(--main-transition) ;
+}
+header .container > ul > li a::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fafafa;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+header .container > ul > li a:hover::before, header .container > ul > li a:hover::after {
+    width: 100%;
 }
 /* End Heading Section */
 /* Extra Small */
