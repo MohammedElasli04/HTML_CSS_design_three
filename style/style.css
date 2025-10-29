@@ -37,6 +37,11 @@ header .container {
     align-items: center;
     position: relative;
 }
+@media (max-width: 769px) {
+    header .container {
+        flex-direction: column;
+    }
+}
 header .container > a {
     color: var(--main-color);
     font-size: 25px;
@@ -46,6 +51,11 @@ header .container > a {
     justify-content: center;
     align-items: center;
     transition: var(--main-transition);
+}
+@media (max-width: 769px) {
+    header .container > a {
+        height: 40px;
+    }
 }
 header .container > a:hover {
     color: var(--main-color-hover);
@@ -65,6 +75,12 @@ header .container > .main-heading > li a {
     text-transform: capitalize;
     transition: var(--main-transition) linear;
 }
+@media (max-width: 769px) {
+    header .container > .main-heading > li a {
+        height: 45px;
+        padding: 0 12px;
+    }
+}
 header .container > ul > li a:hover {
     color: var(--main-color);
 }
@@ -72,11 +88,16 @@ header .container > ul > li a::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 0;
+    bottom: 0;
     background-color: var(--main-color);
     height: 4px;
     width: 0;
     transition: var(--main-transition) ;
+}
+@media (min-width: 769px) {
+    header .container > .main-heading > li a::before {
+        top: 0;
+    }
 }
 header .container > ul > li a::after {
     content:"";
