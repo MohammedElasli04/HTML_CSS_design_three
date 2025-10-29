@@ -2,6 +2,7 @@
 :root {
     --main-color: #2196f3;
     --main-color-hover: #1787e0;
+    --main-transition:0.3s;
 }
 /* Start Components */
 * {
@@ -24,7 +25,44 @@ a {
     text-decoration: none;
 }
 /* End Components */
+/* Start Heading Section */
+header {
+    background-color: white;
+    box-shadow: 0 0 10px #DDD;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container > a {
+    color: var(--main-color);
+    font-size: 25px;
+    font-weight: 900;
+    height:74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .container > ul {
+    display: flex;
+}
+header .container > ul > li a {
+    color: black;
+    padding: 0 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74px;
+    text-transform: capitalize;
+    transition: var(--main-transition) linear;
+}
 
+header .container > ul > li a:hover {
+    color: var(--main-color);
+}
+/* End Heading Section */
 /* Extra Small */
 @media (max-width: 576px) {
     .container {
