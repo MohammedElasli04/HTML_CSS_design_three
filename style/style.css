@@ -4,6 +4,7 @@
     --main-color-hover: #1787e0;
     --main-transition: 0.3s;
     --text-main-color: #666;
+    --main-animation-duration: 3s;
 }
 /* Start Components */
 * {
@@ -60,7 +61,7 @@ header .container > a {
 }
 @media (max-width: 769px) {
     header .container > a {
-        height: 40px;
+        height: 45px;
     }
 }
 header .container > a:hover {
@@ -84,7 +85,8 @@ header .container > .main-heading > li a {
 @media (max-width: 769px) {
     header .container > .main-heading > li a {
         height: 45px;
-        padding: 0 12px;
+        padding: 0 10px;
+        text-align: center;
     }
 }
 header .container > ul > li a:hover {
@@ -137,6 +139,11 @@ header .container > ul > li a:hover::before, header .container > ul > li a:hover
     height: 100%;
     background-color: #ececec;
 }
+@media (max-width: 769px) {
+    .landing::before {
+        transform: skewY(-16deg);
+    }
+}
 .landing .container {
     position: absolute;
     top: 40%;
@@ -147,6 +154,11 @@ header .container > ul > li a:hover::before, header .container > ul > li a:hover
 }
 .landing .text-landing {
     flex: 1;
+}
+@media (max-width: 992px) {
+    .landing .text-landing {
+        text-align: center;
+    }
 }
 .landing .text-landing h1 {
     text-transform: capitalize;
@@ -159,12 +171,76 @@ header .container > ul > li a:hover::before, header .container > ul > li a:hover
     letter-spacing: 1px;
 }
 .landing .img-lsection {
-    max-width: 500px;
+    width: 500px;
+}
+@media (max-width: 992px) {
+    .landing .img-lsection {
+        display: none;
+    }
 }
 .landing .img-lsection img {
     max-width: 100%;
+    animation: up-down var(--main-animation-duration) alternate infinite linear;
+}
+.landing a {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--main-color);
+    transition: var(--main-transition);
+    animation: bouncing var(--main-animation-duration) infinite linear;
+}
+.landing a:hover {
+    color: var(--main-color-hover);
+}
+.landing a i {
+    font-size: 30px;
 }
 /* End Landing Section */
+
+
+
+
+
+
+
+
+
+
+
+/* Animations section */
+@keyframes up-down {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+@keyframes bouncing {
+    0%,
+    10%,
+    20%,
+    30%,
+    40%,
+    50%,
+    70%,
+    90%,
+    100% {
+        transform: translateY(0);
+    }
+    60%,80% {
+        transform: translateY(10px);
+    }
+}
+
+
+
+
+
+
+
 /* Extra Small */
 @media (max-width: 576px) {
     .container {
