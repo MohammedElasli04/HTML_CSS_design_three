@@ -2,13 +2,19 @@
 :root {
     --main-color: #2196f3;
     --main-color-hover: #1787e0;
-    --main-transition:0.3s;
+    --main-transition: 0.3s;
+    --text-main-color: #666;
 }
 /* Start Components */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+/* Importing the font family */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+body {
+    font-family: "Cairo", sans-serif;
 }
 .container {
     padding-left: 15px;
@@ -45,7 +51,7 @@ header .container {
 header .container > a {
     color: var(--main-color);
     font-size: 25px;
-    font-weight: 900;
+    font-weight: 700;
     height:74px;
     display: flex;
     justify-content: center;
@@ -114,6 +120,51 @@ header .container > ul > li a:hover::before, header .container > ul > li a:hover
     width: 100%;
 }
 /* End Heading Section */
+/* Start Landing Section */
+.landing {
+    position: relative;
+    height: calc(100vh - 74px );
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -0px;
+    left: 0;
+    width: 100%;
+    transform: skewY(-6deg);
+    transform-origin: left top;
+    height: 100%;
+    background-color: #ececec;
+}
+.landing .container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+.landing .text-landing {
+    flex: 1;
+}
+.landing .text-landing h1 {
+    text-transform: capitalize;
+    margin: 0 0 10px 0;
+    letter-spacing: -2px;
+}
+.landing .text-landing p {
+    color: var(--text-main-color);
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+.landing .img-lsection {
+    max-width: 500px;
+}
+.landing .img-lsection img {
+    max-width: 100%;
+}
+/* End Landing Section */
 /* Extra Small */
 @media (max-width: 576px) {
     .container {
