@@ -31,6 +31,7 @@ ul {
 a {
     text-decoration: none;
 }
+
 /* End Components */
 /* Start Heading Section */
 header {
@@ -121,6 +122,8 @@ header .container > ul > li a::after {
 header .container > ul > li a:hover::before, header .container > ul > li a:hover::after {
     width: 100%;
 }
+/* Start Mega Menu */
+/* End Mega Menu */
 /* End Heading Section */
 /* Start Landing Section */
 .landing {
