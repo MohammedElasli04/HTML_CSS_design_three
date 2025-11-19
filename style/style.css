@@ -123,6 +123,7 @@ header .container > ul > li a:hover::before, header .container > ul > li a:hover
     width: 100%;
 }
 /* Start Mega Menu */
+
 /* End Mega Menu */
 /* End Heading Section */
 /* Start Landing Section */
@@ -134,7 +135,7 @@ header .container > ul > li a:hover::before, header .container > ul > li a:hover
     content: "";
     position: absolute;
     z-index: -1;
-    top: -0px;
+    top: 0px;
     left: 0;
     width: 100%;
     transform: skewY(-6deg);
@@ -145,6 +146,7 @@ header .container > ul > li a:hover::before, header .container > ul > li a:hover
 @media (max-width: 769px) {
     .landing::before {
         transform: skewY(-16deg);
+        top: -47px;
     }
 }
 .landing .container {
@@ -187,12 +189,17 @@ header .container > ul > li a:hover::before, header .container > ul > li a:hover
 }
 .landing a {
     position: absolute;
-    bottom: 30px;
+    bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
     color: var(--main-color);
     transition: var(--main-transition);
     animation: bouncing var(--main-animation-duration) infinite linear;
+}
+@media (max-width: 769px) {
+    .landing a {
+        bottom: 53px;
+    }
 }
 .landing a:hover {
     color: var(--main-color-hover);
@@ -202,12 +209,7 @@ header .container > ul > li a:hover::before, header .container > ul > li a:hover
 }
 /* End Landing Section */
 /* Start Articles Section */
-.articles {
 
-}
-.articles .container {
-    
-}
 /* End Articles Section */
 
 
