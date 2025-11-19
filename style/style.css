@@ -123,7 +123,18 @@ header .container > ul > li a:hover::before, header .container > ul > li a:hover
     width: 100%;
 }
 /* Start Mega Menu */
+header .mega-menu {
+    
+}    
+header .mega-menu .img-other {
 
+}
+header .mega-menu .img-other img{
+
+}
+header .mega-menu .links li a{
+
+}
 /* End Mega Menu */
 /* End Heading Section */
 /* Start Landing Section */
