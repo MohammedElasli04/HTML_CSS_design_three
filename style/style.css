@@ -126,25 +126,37 @@ header .container > ul > li > a:hover::before, header .container > ul > li > a:h
 header .mega-menu {
     display: flex;
     position: absolute;
-    top: calc(100% + 20px);
+    top: calc(100% + 30px);
     left: 0;
     width: 100%;
     background: white;
-    gap: 20px;
+    gap: 50px;
     z-index: 3;
     padding: 20px;
+    border-bottom: 4px solid var(--main-color);
 }    
 header .mega-menu .img-other {
-
+    max-width: 600px;
 }
 header .mega-menu .img-other img{
-
+    max-width: 100%;
 }
 header .mega-menu .links {
     flex: 1;
+    min-width: 240px;
 }
 header .mega-menu .links li a{
-
+    color: var(--main-color);
+    display: block;
+    padding: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+header .mega-menu .links li:not(:last-child) a {
+    border-bottom: var(--text-main-color) solid 1px;
+}
+header .mega-menu .links li a i{
+    margin-right: 15px;
 }
 /* End Mega Menu */
 /* End Heading Section */
