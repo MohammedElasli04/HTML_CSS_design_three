@@ -134,9 +134,21 @@ header .mega-menu {
     z-index: 3;
     padding: 20px;
     border-bottom: 4px solid var(--main-color);
-}    
+}
+@media (max-width:769px) {
+    header .mega-menu {
+        flex-direction: column;
+        gap:0;
+        padding: 0;
+    }   
+}
 header .mega-menu .img-other {
     max-width: 600px;
+}
+@media (max-width: 992px) {
+    header .mega-menu .img-other {
+        display: none;
+    }
 }
 header .mega-menu .img-other img{
     max-width: 100%;
@@ -145,15 +157,29 @@ header .mega-menu .links {
     flex: 1;
     min-width: 240px;
 }
-header .mega-menu .links li a{
+header .mega-menu .links li a {
     color: var(--main-color);
     display: block;
     padding: 20px;
     font-weight: bold;
     text-transform: capitalize;
+    transition: var(--main-transition);
+}
+@media (max-width: 992px) {
+    header .mega-menu .links li a {
+        padding:12px;
+    }
+}
+header .mega-menu .links li a:hover {
+    background-color: #f3f3f3;
 }
 header .mega-menu .links li:not(:last-child) a {
     border-bottom: var(--text-main-color) solid 1px;
+}
+@media (max-width: 769px) {
+    header .mega-menu .links:first-of-type li a {
+    border-bottom: var(--text-main-color) solid 1px;
+}
 }
 header .mega-menu .links li a i{
     margin-right: 15px;
