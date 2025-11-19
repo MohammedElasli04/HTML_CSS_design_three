@@ -90,6 +90,7 @@ header .container > .main-heading > li > a {
         text-align: center;
     }
 }
+
 header .container > .main-heading > li > a:hover {
     color: var(--main-color);
 }
@@ -119,21 +120,33 @@ header .container > .main-heading > li > a::after {
     z-index: -1;
     transition: var(--main-transition);
 }
+header .container > .main-heading > li:last-child a i{
+    margin-left: 8px;
+    position: relative;
+    top: 2px;
+}
 header .container > ul > li > a:hover::before, header .container > ul > li > a:hover::after {
     width: 100%;
 }
 /* Start Mega Menu */
+header .container > .main-heading > li:last-child:hover .mega-menu{
+    opacity: 1;
+    z-index: 1;
+    top: calc(100% + 2px);
+}
 header .mega-menu {
     display: flex;
+    opacity: 0;
     position: absolute;
-    top: calc(100% + 30px);
+    top: calc(100% + 80px);
     left: 0;
     width: 100%;
     background: white;
     gap: 50px;
-    z-index: 3;
+    z-index: -1;
     padding: 20px;
     border-bottom: 4px solid var(--main-color);
+    transition: var(--main-transition);
 }
 @media (max-width:769px) {
     header .mega-menu {
@@ -271,14 +284,6 @@ header .mega-menu .links li a i{
 /* Start Articles Section */
 
 /* End Articles Section */
-
-
-
-
-
-
-
-
 
 
 /* Animations section */
