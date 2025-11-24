@@ -32,7 +32,34 @@ a {
     text-decoration: none;
 }
 .main-title {
-    
+    text-transform: uppercase;
+    border: solid black 2px;
+    width: fit-content;
+    margin: 100px auto;
+    padding: 10px 20px;
+    position: relative;
+}
+.main-title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    background-color: var(--main-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.main-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    background-color: var(--main-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }
 /* End Components */
 /* Start Heading Section */
