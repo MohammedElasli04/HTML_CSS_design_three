@@ -325,19 +325,48 @@ header .mega-menu .links li a i{
     padding-bottom: 100px;
 }
 .articles .container {
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.articles .container .card{
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    border-radius: 9px;
+    overflow: hidden;
+}
+.articles .container img {
+    max-width: 100%;
 }
 .articles .card-body {
+    padding: 20px;
+}
+.articles .card-body h4 {
+    text-transform: capitalize;
+    margin:0 0 15px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.articles .card-body p {
+    color:var(--text-main-color);
+    line-height: 1.6;
     
+
 }
 .articles .card-footer {
-
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgb(229 229 229);
 }
 .articles .card-footer a{
-
+    text-transform: capitalize;
+    color: var(--main-color);
+    font-weight: bolder;
 }
 .articles .card-footer i{
-
+    color: var(--main-color);
+    cursor: pointer;
 }
 /* End Articles Section */
 
